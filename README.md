@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Description
+The project is implemented as pre-assignment for internship position at Wolt. 
+
+
 ## Available Scripts
 
 In the project directory, you can run:
