@@ -7,7 +7,7 @@ export default class Restaurant extends Component {
 
         return (
             <ResCard className='col-9 mx-auto col-md-7 col-lg-4 my-3' >
-                <div className='card' style={{height: 340}}>
+                <div className='card'>
                     {/* card image */}
                     <div className='img-container'>
                         <img src={image} alt='resPic' className='card-img-top' style={{height: 200}}/>
@@ -16,7 +16,7 @@ export default class Restaurant extends Component {
                     {/* card footer */}
                     <div className='card-footer'>
                         <div className='top'>
-                            <h5 style={{fontStyle:'italic', fontWeight:'bold'}}>{name}</h5>
+                            <h5 style={{fontStyle:'italic', fontWeight:'bold',whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>{name}</h5>
                             <h6 >{description}</h6>
                         </div>
                         <div className='left'>

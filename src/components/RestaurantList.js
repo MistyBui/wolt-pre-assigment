@@ -32,15 +32,14 @@ export default class RestaurantList extends Component {
                         <div className='row'>
                             <ResConsumer>
                                 {value =>  {
-                                    return value.res.map(res => {
-                                        return <Restaurant restaurant={res} />
+                                    return value.res.map( (res,id) => {
+                                        return <Restaurant key={id} restaurant={res} />
                                     })
                                 }}
                             </ResConsumer>
                         </div>
                     </div>
                 </div>
-
             </React.Fragment>
         )
     }

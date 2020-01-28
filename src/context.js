@@ -9,10 +9,12 @@ class ResProvider extends Component {
         res: [],
     }
 
+    //load restaurants list when open
     componentDidMount() {   
         this.setRes();
     }
 
+    //go through json file and load each restaurant to list
     setRes = () => {
         let tempRes = [];
         data.restaurants.forEach(res => {
@@ -24,6 +26,7 @@ class ResProvider extends Component {
         })
     }
 
+    //compare name and return ascending list
     compareRes = (a,b) => {
         const resA = a.name.toUpperCase();
         const resB = b.name.toUpperCase();
@@ -37,6 +40,7 @@ class ResProvider extends Component {
         return comparison;
     }
 
+    //apply compare method to restaurants list
     sortResAscending = () => {
         let tempRes = data.restaurants.sort(this.compareRes)
         console.log(tempRes);
@@ -45,6 +49,7 @@ class ResProvider extends Component {
         })
     }
 
+    //reverse ascenging list
     sortResDescending = () => {
         let tempRes = data.restaurants.sort(this.compareRes).reverse()
         console.log(tempRes);
